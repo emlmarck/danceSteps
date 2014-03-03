@@ -3,7 +3,7 @@
 
 //import peasy.*;
 //import processing.opengl.*;
-import processing.dxf.*;
+//import processing.dxf.*;
 import controlP5.*;
 ControlP5 cp5;
 //PeasyCam cam;
@@ -15,10 +15,10 @@ int zdim = 50;
 int zoom = 0;
 float spinY = 90.0;
 float spinX = 0.0;
-boolean shaded = false;
+//boolean shaded = false;
 
 //____DXF_________________//
-boolean record = false;
+//boolean record = false;
 void setup()
 {
   size(800, 640, P3D);
@@ -86,16 +86,16 @@ void draw()
 
   lights();
   boxDraw();
-  if (record == true) {
-    endRaw();
-    record = false; // Stop recording to the file
-  }
+  // if (record == true) {
+  //   endRaw();
+  //   record = false; // Stop recording to the file
+  // }
 }
 
 void boxDraw() {
-  if (record == true) {
-    beginRaw(DXF, "output.dxf"); // Start recording to the file
-  }
+  // if (record == true) {
+  //   beginRaw(DXF, "output.dxf"); // Start recording to the file
+  // }
   pushMatrix();
   translate(width/2, height/2, zoom );
   rotateY(radians(spinY));
@@ -115,8 +115,8 @@ void boxDraw() {
 }
 
 
-void keyPressed() {
-  if (key == 'R' || key == 'r') { // Press R to save the file
-    record = true;
-  }
-}
+// void keyPressed() {
+//   if (key == 'R' || key == 'r') { // Press R to save the file
+//     record = true;
+//   }
+// }
